@@ -1,7 +1,7 @@
 package firebase;
 
 @:enum
-abstract EventType(String) {
+abstract EventType(String) to String {
 	var Value = "value";
 	var ChildAdded = "child_added";
 	var ChildChanged = "child_changed";
