@@ -10,4 +10,5 @@ extern class Admin {
 
     public static function initializeApp(options:AppOptions):Void;
     public static function app(?name:String):App;
+    public static function auth():firebase.auth.Auth;
 }
