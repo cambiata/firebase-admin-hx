@@ -26,10 +26,11 @@ extern class Query {
     @:overload(function(eventType:String, callback:DataSnapshot->String->Void, ?cancelCallbackOrContext:Dynamic->Void, ?context:Dynamic):Query {} )
     public function on(eventType:String, callback:DataSnapshot->Void, ?cancelCallbackOrContext:Dynamic, ?context:Dynamic):Void;
     
-    @:overload(function(eventType:String, ?successCallback:DataSnapshot->String->Void, ?failureCallbackOrContext:Dynamic->Void, ?context:Dynamic):Query {} )
-    @:overload(function(eventType:String, ?successCallback:DataSnapshot->Void, ?failureCallbackOrContext:Dynamic->Void, ?context:Dynamic):Query {} )
-    @:overload(function(eventType:String, ?successCallback:DataSnapshot->String->Void, ?failureCallbackOrContext:Dynamic, ?context:Dynamic):Promise<DataSnapshot> {} )
-    public function once(eventType:String, ?successCallback:DataSnapshot->Void, ?failureCallbackOrContext:Dynamic, ?context:Dynamic):Promise<DataSnapshot>;
+    // @:overload(function(eventType:String, ?successCallback:DataSnapshot->String->Void, ?failureCallbackOrContext:Dynamic->Void, ?context:Dynamic):Query {} )
+    // @:overload(function(eventType:String, ?successCallback:DataSnapshot->Void, ?failureCallbackOrContext:Dynamic->Void, ?context:Dynamic):Query {} )
+    // @:overload(function(eventType:String, ?successCallback:DataSnapshot->String->Void, ?failureCallbackOrContext:Dynamic, ?context:Dynamic):Promise<DataSnapshot> {} )
+    // public function once(eventType:String, ?successCallback:DataSnapshot->Void, ?failureCallbackOrContext:Dynamic, ?context:Dynamic):Promise<DataSnapshot>;
+    public function once(eventType:String, ?successCallback:DataSnapshot->Void, ?failureCallbackOrContext:Dynamic):Promise<DataSnapshot>;
     
     public function orderByChild(path:String):Query;
     public function orderByKey():Query;
